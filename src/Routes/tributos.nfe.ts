@@ -8,8 +8,8 @@ import geraCofins from '../Services/gera.Cofins.Nfe';
 
 const tributosNFe = Router();
 
-tributosNFe.post('/', (request, response) => {
-  const {icms,pis,cofins} = request.body
+tributosNFe.get('/', async (request, response) => {
+  const {icms,pis,cofins} = request.query;
   console.log(icms,pis,cofins);
 
   const CSTCSOSN = validaCstCsosn(icms);   

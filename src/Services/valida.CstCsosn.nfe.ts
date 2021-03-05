@@ -1,7 +1,7 @@
 function validaCstCsosn(icms){
-  const { cst } = icms;
+  //const { cst } = icms;
 
-  switch (cst) {
+  switch (icms) {
     case '00':
     case '10':
     case '20':
@@ -13,7 +13,7 @@ function validaCstCsosn(icms){
     case '70':
     case '90':
       console.log('ICMS com  CST');
-      return cst;
+      return icms;
     break;
     case '101':
     case '102':
@@ -26,7 +26,7 @@ function validaCstCsosn(icms){
     case '500':
     case '900':
       console.log('ICMS com  CSOSN');
-      return cst;
+      return icms;
     break;
 
     default:

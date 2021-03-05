@@ -1,7 +1,7 @@
 function validaCstPisCofins(icms){
-  const { cst } = icms;
+  //const { cst } = icms;
 
-  switch (cst) {
+  switch (icms) {
     case '01':
     case '02':
     
@@ -38,7 +38,7 @@ function validaCstPisCofins(icms){
     case '98':
     case '99':
       console.log('CST do Pis ou Cofins invalido');
-      return cst;
+      return icms;
     break;
 
     default:

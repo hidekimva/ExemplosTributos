@@ -7,10 +7,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1"
   },
-  "engines": {
-    "node": "12.18.2"
-  },
-  "scripts": {
+   "scripts": {
     "build": "tsc",
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/Server.ts",
     "start": "ts-node src/index.ts",

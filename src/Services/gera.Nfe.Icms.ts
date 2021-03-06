@@ -1,6 +1,9 @@
-function geraIcms(icms) {
+function geraIcms(icms:string) {
+
   if(icms == 'CST/CSOSN do ICMS invalido') {
-    return 'CST/CSOSN do ICMS invalido'
+    const ICMS = {message:'CST/CSOSN do ICMS invalido'};
+
+    return ICMS;
   };
   
   if (icms == '00') {
@@ -58,6 +61,43 @@ function geraIcms(icms) {
 
     return ICMS;
   };
+
+  if (icms == '101'){
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg","creditoSimplesNacional":{"valor":"Number - Obg","percentual":"Number - Obg"}}};
+
+    return ICMS;
+  };
+
+  if (icms == '102' || icms == '103' || icms == '300' || icms == '400'){
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg"}};
+
+    return ICMS;
+  };
+
+  if (icms == '201') {
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg","substituicaoTributaria":{"baseCalculo":{"modalidadeDeterminacao":"Number - Obg","valor":"Number - Obg","percentualReducao":"Number - Opc"},"aliquota":"Number - Obg","valor":"Number - Obg","margemValorAdicionado":{"percentual":"Number - Opc"},"fundoCombatePobreza":{"baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc"},},"creditoSimplesNacional":{"percentual":"Number - Opc","valor":"Number - Opc"}}};
+
+    return ICMS;
+  }
+
+  if (icms == '202' || icms == '203') {
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg","substituicaoTributaria":{"baseCalculo":{"valor":"Number - Obg","modalidadeDeterminacao":"Number - Obg","percentualReducao":"Number - Opc"},"aliquota":"Number - Obg","valor":"Number - Obg","margemValorAdicionado":{"percentual":"Number - Opc"},"fundoCombatePobreza":{"baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valo":"Number - Opc"}},}};
+
+    return ICMS;
+  };
+
+  if (icms == '500') {
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg","valor":"Number - Opc","substituicaoTributaria":{"baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc","fundoCombatePobreza":{"baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc",}},"efetivo":{"percentualReducao":"Number - Opc","baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc"}}};
+
+    return ICMS;
+  };
+
+  if (icms == '900') {
+    const ICMS = {"icms":{"origem":"String - Obg","cst":+`${icms}`+" - String - Obg","baseCalculo":{"modalidadeDeterminacao":"Number - Opc","percentualReducao":"Number - Opc","valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc","substituicaoTributaria":{"baseCalculo":{"modalidadeDeterminacao":"Number - Opc","percentualReducao":"Number - Opc","valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc","ufDevido":"String - Opc","margemValorAdicionado":{"percentual":"Number - Opc"},"fundoCombatePobreza":{"baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","valor":"Number - Opc"}},"operacaoPropria":{"percentual":"Number - Opc"},"creditoSimplesNacional":{"percentual":"Number - Opc","valor":"Number - Opc"}}};
+
+    return ICMS;
+  };
+
 
 }
 

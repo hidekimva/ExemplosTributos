@@ -1,7 +1,9 @@
-function geraPis(pis) {
+function geraPis(pis:string) {
   
   if (pis == 'CST invalido'){
-    return 'CST do PIS invalido'
+    const PIS = {message: 'CST do PIS invalido'};
+    
+    return PIS
   }
 
   if (pis == '01' || pis == '02'){
@@ -22,9 +24,9 @@ function geraPis(pis) {
     return PIS;
   };
 
-  if (pis >= 49) {
+  if (pis >= '49') {
 
-    const PIS = {"pis":{"cst":"49 - String - Obg","valor":"Number - Obg","baseCalculo":{"valor":"Number - Opc"},"aliquota":"Number - Opc","substituicaoTributaria":{"baseCalculo":"Number - Opc","aliquota":"Number - Opc","quantidadeVendida":"Number - Opc","aliquotaReais":"Number - Opc","valor":"Number - Opc"}}}
+    const PIS = {"pis":{"cst":+`${ pis }`+" - String - Obg","aliquota":"Number - Obg","valor":"Number - Obg","baseCalculo":{"valor":"Number - Obg"},"substituicaoTributaria":{"baseCalculo":"Number - Opc","aliquota":"Number - Opc","valor":"Number - Opc"}}};
 
     return PIS;
   };

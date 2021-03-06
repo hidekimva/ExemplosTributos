@@ -1,4 +1,4 @@
-function validaCstCsosn(icms: string){
+function validaCstCsosn(icms: any){
  
   switch (icms) {
     case '00':

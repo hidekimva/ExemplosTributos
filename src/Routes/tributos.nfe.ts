@@ -9,10 +9,10 @@ import geraCofins from '../Services/gera.Nfe.Cofins';
 const tributosNFe = Router();
 
 tributosNFe.get('/', async (request, response) => {
-  const {icms,pis,cofins} = request.query;
-  console.log(icms,pis,cofins);
+  const { icms, pis, cofins } = request.query;
+  console.log( icms, pis, cofins );
 
-  const CSTCSOSN = validaCstCsosn(icms);   
+  const CSTCSOSN = validaCstCsosn( icms );   
   const dadosICMS = geraIcms(CSTCSOSN);
 
   const CSTPis = validaCstPC(pis);

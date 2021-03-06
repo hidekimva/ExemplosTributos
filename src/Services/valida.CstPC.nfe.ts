@@ -1,4 +1,4 @@
-function validaCstPisCofins(icms: string){
+function validaCstPisCofins(icms: any){
 
   switch (icms) {
     case '01':

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/Server.ts",
-    "start": "ts-node src/Server.ts",
+    "start": "dist/Server.js",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {

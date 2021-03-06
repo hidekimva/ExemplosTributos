@@ -14,8 +14,7 @@
   "scripts": {
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/Server.ts",
     "start": "ts-node src/Server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
-    "build":"tsc"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",

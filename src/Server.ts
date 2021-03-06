@@ -3,8 +3,9 @@ const express = require('express');
 const app = express();
 
 import routes from './Routes/index';
+import cors from 'cors';
 
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use(routes);
 const porta = process.env.PORT
